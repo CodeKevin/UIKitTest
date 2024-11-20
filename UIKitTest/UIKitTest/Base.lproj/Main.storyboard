@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnN-jG-90b">
+                                <rect key="frame" x="20" y="261" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6bd-up-09d"/>
+                                </constraints>
+                                <menu key="menu" id="Crz-7u-nH7">
+                                    <children>
+                                        <command title="horizontal" id="6hA-aX-jJl">
+                                            <connections>
+                                                <action selector="selectAxis:" destination="BYZ-38-t0r" id="ADA-fh-KUG"/>
+                                            </connections>
+                                        </command>
+                                        <command title="vertical" id="d7l-En-Yqr">
+                                            <connections>
+                                                <action selector="selectAxis:" destination="BYZ-38-t0r" id="dqc-8X-3M4"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Select Axis"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5M-xb-W0s">
+                                <rect key="frame" x="20" y="311" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bgw-jn-Elw"/>
+                                </constraints>
+                                <menu key="menu" id="A0c-Am-jUu">
+                                    <children>
+                                        <command title="fill" id="Dy2-2N-Jta">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="selectDistribution:" destination="BYZ-38-t0r" id="mjh-cA-kaj"/>
+                                            </connections>
+                                        </command>
+                                        <command title="fillEqually" id="rP2-HJ-51b">
+                                            <connections>
+                                                <action selector="selectDistribution:" destination="BYZ-38-t0r" id="TXp-Bm-UXO"/>
+                                            </connections>
+                                        </command>
+                                        <command title="fillProportionally" id="QUL-hw-1UT">
+                                            <connections>
+                                                <action selector="selectDistribution:" destination="BYZ-38-t0r" id="BOd-BR-1dA"/>
+                                            </connections>
+                                        </command>
+                                        <command title="equalSpacing" id="F3Y-oX-yQr">
+                                            <connections>
+                                                <action selector="selectDistribution:" destination="BYZ-38-t0r" id="o5Y-7i-8vk"/>
+                                            </connections>
+                                        </command>
+                                        <command title="equalCentering" id="DgU-fZ-yuL">
+                                            <connections>
+                                                <action selector="selectDistribution:" destination="BYZ-38-t0r" id="Itd-Ao-deh"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Select Distribution"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFa-C5-Een">
+                                <rect key="frame" x="20" y="361" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NAw-QO-cgo"/>
+                                </constraints>
+                                <menu key="menu" id="D6g-4s-6CQ">
+                                    <children>
+                                        <command title="fill" id="ufx-Za-skM">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="SaU-Dd-tdi"/>
+                                            </connections>
+                                        </command>
+                                        <command title="leading" id="kAa-56-Fm6">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="5Aj-bn-ala"/>
+                                            </connections>
+                                        </command>
+                                        <command title="top" id="zST-Tq-75n">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="Qsz-gH-xd8"/>
+                                            </connections>
+                                        </command>
+                                        <command title="firstBaseline" id="Tcj-pN-7n1">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="Jok-cI-eS0"/>
+                                            </connections>
+                                        </command>
+                                        <command title="center" id="0yg-85-Y2u">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="BLW-zG-mpR"/>
+                                            </connections>
+                                        </command>
+                                        <command title="trailing" id="CoU-xM-kQP">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="zlA-u1-BoW"/>
+                                            </connections>
+                                        </command>
+                                        <command title="bottom" id="nCO-Bw-MGT">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="CRx-st-M6h"/>
+                                            </connections>
+                                        </command>
+                                        <command title="lastBaseline" id="77n-Lc-27b">
+                                            <connections>
+                                                <action selector="selectAlignment:" destination="BYZ-38-t0r" id="oiV-Z8-Dj6"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Select Alignment"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwI-ih-7Eq">
+                                <rect key="frame" x="20" y="411" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ccA-Ba-6MZ"/>
+                                </constraints>
+                                <menu key="menu" id="JwD-iD-4y6">
+                                    <children>
+                                        <command title="0" id="sar-tU-QkC">
+                                            <connections>
+                                                <action selector="setupSpacing:" destination="BYZ-38-t0r" id="Hg3-7a-bMR"/>
+                                            </connections>
+                                        </command>
+                                        <command title="10" id="umS-hJ-74b">
+                                            <connections>
+                                                <action selector="setupSpacing:" destination="BYZ-38-t0r" id="iDw-0Q-PlL"/>
+                                            </connections>
+                                        </command>
+                                        <command title="50" id="0Lv-yG-dhz">
+                                            <connections>
+                                                <action selector="setupSpacing:" destination="BYZ-38-t0r" id="b86-IV-2Iu"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Select spacing"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22D-f5-rQk">
+                                <rect key="frame" x="86.666666666666686" y="768" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="v0i-qU-Oua"/>
+                                    <constraint firstAttribute="height" constant="30" id="zyi-Uv-tUR"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="add"/>
+                                <connections>
+                                    <action selector="addSubviews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylh-eM-Wth"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0t-Ws-Z6a">
+                                <rect key="frame" x="206.66666666666663" y="768" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jMZ-Pj-Myr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wNi-d4-hfv"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="delete"/>
+                                <connections>
+                                    <action selector="deleteSubviews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="srT-KV-qOu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="22D-f5-rQk" secondAttribute="bottom" constant="20" id="Dah-wi-VYY"/>
+                            <constraint firstItem="YFa-C5-Een" firstAttribute="top" secondItem="K5M-xb-W0s" secondAttribute="bottom" constant="20" id="Mbm-1r-h56"/>
+                            <constraint firstItem="h0t-Ws-Z6a" firstAttribute="leading" secondItem="22D-f5-rQk" secondAttribute="trailing" constant="20" id="Mcs-UM-7ZM"/>
+                            <constraint firstItem="K5M-xb-W0s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Oxk-Pk-9la"/>
+                            <constraint firstItem="DwI-ih-7Eq" firstAttribute="top" secondItem="YFa-C5-Een" secondAttribute="bottom" constant="20" id="Ven-Lv-xZG"/>
+                            <constraint firstItem="DwI-ih-7Eq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d1R-T7-mP8"/>
+                            <constraint firstItem="DwI-ih-7Eq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eLU-vA-Qzp"/>
+                            <constraint firstItem="YFa-C5-Een" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fVi-KK-8wL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DwI-ih-7Eq" secondAttribute="trailing" constant="20" id="gY3-B4-5jL"/>
+                            <constraint firstItem="K5M-xb-W0s" firstAttribute="top" secondItem="xnN-jG-90b" secondAttribute="bottom" constant="20" id="gxD-ai-MNR"/>
+                            <constraint firstItem="h0t-Ws-Z6a" firstAttribute="bottom" secondItem="22D-f5-rQk" secondAttribute="bottom" id="jj3-Np-IQP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xnN-jG-90b" secondAttribute="trailing" constant="20" id="jw8-6D-aOG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YFa-C5-Een" secondAttribute="trailing" constant="20" id="thf-gv-rYW"/>
+                            <constraint firstItem="22D-f5-rQk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="v7O-04-R1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K5M-xb-W0s" secondAttribute="trailing" constant="20" id="w1F-Wd-hBw"/>
+                            <constraint firstItem="xnN-jG-90b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y0a-eO-yDm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alignmentButton" destination="YFa-C5-Een" id="Ala-nY-lJD"/>
+                        <outlet property="axisButton" destination="xnN-jG-90b" id="9hb-qo-mgR"/>
+                        <outlet property="distributionButton" destination="K5M-xb-W0s" id="Zsv-Ww-khx"/>
+                        <outlet property="spaceButton" destination="DwI-ih-7Eq" id="JQH-RK-m3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
